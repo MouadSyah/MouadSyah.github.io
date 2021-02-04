@@ -1,296 +1,160 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>programmation</title>
+    <title>Mouad Sayah</title>
     <link rel="stylesheet" type="text/css" href="font/fontawesome-free-5.14.0-web/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/css.min.css"/>
     <script src="js/js1.min.js"></script>
   </head>
   <body>
     <header>
-      <main>
-        <div class="cover">
-          <div class="container header">
-            <nav>
-              <div class="title">
-                <h2>programmation</h2>
-              </div>
-              <div class="links">
-                <ul class="d-none d-lg-block"><a class="active" href="#">
-                    <li>à propos</li></a><a href="#about">
-                    <li>à propos</li></a><a href="#history">
-                    <li>histoire</li></a><a href="#compete">
-                    <li>compétences</li></a><a href="#robotique">
-                    <li>robotique</li></a><a href="#question">
-                    <li>question</li></a></ul>
-                <ul><a class="menu" href="">
-                    <li><i class="fas fa-bars"></i></li></a></ul>
-              </div>
-            </nav>
-            <h1>Exposer sur la <span>programmation</span> pour sceance de conception</h1>
-          </div>
+      <div class="nav-bar container">
+        <div class="logo">
+          <h1>معاذ سياح</h1>
         </div>
-      </main>
-      <div class="alert alert-success" role="alert">
-        <h4 class="alert-heading">Rejouer!</h4>
-        <p>vous avez gagnez, voulez vous rejouer?</p>
-        <hr/>
-        <ul>
-          <li>votre score : <span class="satis-play"></span></li>
-        </ul>
-        <button class="btn replay">Rejouer</button>
-        <button class="btn cancel">Annuler</button>
+        <div class="sections">
+          <ul>
+            <li><a onclick="scrollBY('.about')">من أنا</a></li>
+            <li><a onclick="scrollBY('.competance')">مهاراتي</a></li>
+            <li><a onclick="scrollBY('.projet')">أعمالي</a></li>
+            <li><a onclick="scrollBY('.contact')">تواصل معي</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="load">
-        <div class="spinner-grow text-dark" role="status"><span class="visually-hidden">Loading...</span></div>
+      <div class="text-center content">
+        <h2>أهلا أنا معاذ سياح <br/><span>مبرمج من المغرب</span></h2>
       </div>
-      <div class="scroll-top"><i class="fas fa-chevron-up"></i></div>
+      <button class="start" onclick="scrollBY('.about')"><i class="fas fa-chevron-circle-down"></i></button>
     </header>
-    <section class="about" id="about">
-      <div class="container">
-        <h2>C'est quoi la programmation ?</h2>
-        <p>
-          La programmation, est l'ensemble des activités qui permettent l'écriture des programmes informatiques. C'est une étape importante du développement de logiciels.L'écriture d'un programme se fait dans un langage de programmation. Un logiciel est un ensemble de programmes (qui peuvent être écrits dans des langages de programmation différents) dédié à la réalisation de certaines tâches par un (ou plusieurs) utilisateurs du logiciel. </p>
+    <div class="about">
+      <div class="container text-center"><i class="fas fa-check-circle"></i>
+        <h3>من أنا</h3>
+        <p>اسمي هو معاذ سياح، أنا شاب مغربي أنتمي إلى الجيل الجديد من المبرمجين. أدرس حاليا التكنولوجيا الميكانيكية و  الذكاء الصناعي. يعتبر العالم الحاسوبي هو شغفي ، و وفقني فيه الله .فمهاراتي تسمح لي بتصميم الصفحات الويب كما كان شكلها بكل سهولة.</p>
       </div>
-    </section>
-    <section class="history" id="history">
-      <div class="container">
-        <h2>Comment la programmation a commencer ?</h2>
-      </div>
-      <div class="row text-center">
-        <div class="col-lg-4 date">1801</div>
-        <div class="col-lg-8 info">
-          <p>La première machine programmable (c’est-à-dire machine dont les possibilités changent quand on modifie son programme) est probablement le métier à tisser de Jacquard, qui a été réalisé en 1801. La machine utilisait une suite de cartons perforés. Les trous indiquaient le motif que le métier suivait pour réaliser un tissage ; avec des cartes différentes le métier produisait des tissages différents. Cette innovation a été ensuite améliorée par Herman Hollerith d'IBM pour le développement de la fameuse carte perforée d'IBM.</p>
-        </div>
-      </div>
-      <div class="row text-center"> 
-        <div class="col-lg-4 date d-lg-none d-xs-block">1936</div>
-        <div class="col-lg-8 info">
-          <p>En 1936, la publication de l'article fondateur de la science informatique On Computable Numbers with an Application to the Entscheidungsproblem par Alan Turing allait donner le coup d'envoi à la création de l'ordinateur programmable. Il y présente sa machine de Turing, le premier calculateur universel programmable, et invente les concepts et les termes de programmation et de programme.</p>
-        </div>
-        <div class="col-lg-4 date d-none d-lg-block">1936</div>
-      </div>
-      <div class="row text-center">
-        <div class="col-lg-4 date">NOW</div>
-        <div class="col-lg-8 info">
-          <p>Avec le temps, de nouveaux langages de programmation sont apparus, faisant de plus en plus abstraction du matériel sur lequel devraient tourner les programmes. Ceci apporte plusieurs facteurs de gains : ces langages sont plus faciles à apprendre, un programmeur peut produire du code plus rapidement, et les programmes produits peuvent tourner sur différents types de machines. </p>
-        </div>
-      </div>
-    </section>
-    <section class="lang">
-      <div class="container">
-        <h2>Tendance de language de programation</h2>
-        <div class="statis row">
-          <div class="col-lg-4"><span><i class="fab fa-js d-none d-md-inline"></i> JS</span></div>
-          <div class="col-lg-8">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" data-width="95%"></div>
-            </div>
-          </div>
-        </div>
-        <div class="statis row">
-          <div class="col-lg-4"><span><i class="fab fa-python d-none d-md-inline"></i> Python</span></div>
-          <div class="col-lg-8">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" data-width="92%"></div>
-            </div>
-          </div>
-        </div>
-        <div class="statis row">
-          <div class="col-lg-4"><span><i class="fab fa-java d-none d-md-inline"></i> Java</span></div>
-          <div class="col-lg-8">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" data-width="89%"></div>
-            </div>
-          </div>
-        </div>
-        <div class="statis row">
-          <div class="col-lg-4"><span><i class="fab fa-php d-none d-md-inline"></i> Php</span></div>
-          <div class="col-lg-8">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" data-width="84%"></div>
-            </div>
-          </div>
-        </div>
-        <div class="statis row">
-          <div class="col-lg-4"><span><i class="fas fa-hashtag d-none d-md-inline"></i> C#</span></div>
-          <div class="col-lg-8">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" data-width="82%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="compete" id="compete">
-      <div class="container">
-        <h2>Ce qu'il me faut pou etre programmeur .</h2>
-        <div class="row text-center">
-          <div class="col-lg"><img src="img/programmer.svg" alt=""/>
-            <h3>Aimer la programmation</h3>
-            <p>Pour etre programmeur, il faut d'abord aimer la programation pour pouvoir donner beaucoup dans ce domaine , et n'ennuier pas pendant le Pratiquer.</p>
-          </div>
-          <div class="col-lg"><img src="img/intelegent.svg" alt=""/>
-            <h3>Etre intelegent</h3>
-            <p>Il faut avoir une intelegence pour entrer au domain, et savoie resoudre des equations en math et en logique, car la matier faut avoir la logique.</p>
-          </div>
-          <div class="col-lg"><img src="img/pratique.svg" alt=""/>
-            <h3>Pratiquer beaucoup</h3>
-            <p>Il faut beaucoup pratiquer pour avoir l'experience , l'etude ne fait jamais seulement par savoir lea varient, il fait par la pratique des projet.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="example">
-      <div class="container">
-        <h2>Example d'un jeu fait par Javascript</h2>
-        <div class="game row">
-          <div class="carte rotate col-lg-3">
-            <div class="face-1"></div>
-            <div class="face-2"><img/></div>
-          </div>
-          <div class="carte rotate col-lg-3">
-            <div class="face-1"></div>
-            <div class="face-2"><img/></div>
-          </div>
-          <div class="carte rotate col-lg-3">
-            <div class="face-1"></div>
-            <div class="face-2"><img/></div>
-          </div>
-          <div class="carte rotate col-lg-3">
-            <div class="face-1"></div>
-            <div class="face-2"><img/></div>
-          </div>
-          <div class="carte rotate col-lg-3">
-            <div class="face-1"></div>
-            <div class="face-2"><img/></div>
-          </div>
-          <div class="carte rotate col-lg-3">
-            <div class="face-1"></div>
-            <div class="face-2"><img/></div>
-          </div>
-          <div class="carte rotate col-lg-3">
-            <div class="face-1"></div>
-            <div class="face-2"><img/></div>
-          </div>
-          <div class="carte rotate col-lg-3">
-            <div class="face-1"></div>
-            <div class="face-2"><img/></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="robotique" id="robotique">
-      <div class="row">
-        <div class="col-lg-6"></div>
-        <div class="col-lg-6"></div>
-      </div>
-      <div class="container">
-        <h2>La programmation et la la robotique</h2>
-        <p>
-           La robotique est l'ensemble des techniques permettant la conception et la réalisation de machines 
-          automatiques ou de robots. 
-          Un robot est un système alimenté en énergie qui évolue dans un environnement statique ou dynamique, 
-          il est formé d'un microcontrôleur ainsi que d'un ou plusieurs capteurs et actionneurs. 
-        </p>
-        <p>
-          La structure d'un robot est contrôlée de manière à effectuer une ou un ensemble de tâche. Ce contrôle 
-          inclut trois phases distinctes qui se répètent en boucle : la perception, le traitement et l'action. 
-          Un robot fonctionne par l'exécution continue d'un programme informatique constitués d'algorithmes. 
-          Ce programme est écrit dans un langage de programmation dont la nature est choisie par le constructeur.
-        </p>
-      </div>
-    </section>
-    <footer id="question">
-      <div class="container">
-        <h2>Question :</h2>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                 Comment pouvions etudier la programmation gratuitement ?</button>
-            </h2>
-            <div class="accordion-collapse collapse" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Aujourd’hui, il existe de nombreux manière web pour apprendre à coder gratuitement, et nous en présentons quelques-uns ici dont vous pourrez vous servir pour réussir votre initiation dans l’univers de la programmation.
-                <ul>
-                  <li>W3school.com</li>
-                  <li>Khan academy</li>
-                  <li>Youtube</li>
-                  <li>developer.mozilla.org</li>
-                  <li>El-zero.org (en arabe)</li>
+    </div>
+    <hr/>
+    <div class="competance">
+      <div class="container text-center">
+        <h3>مهاراتي</h3>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="statisctique">
+                  <div class="progresse" data-prog="95">
+                    <div class="progresse-file"></div>
+                    <div class="progresse-file"></div>
+                  </div>
+                  <div class="status">95%</div>
+                </div><span>HTML5/CSS3/JS/Bootstrap</span>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">تصميمات احترافية</li>
+                  <li class="list-group-item">خبرة في المجال</li>
+                  <li class="list-group-item">مهارات في الفوتوشوب</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Quelle sont les domaines de programation ?</button>
-            </h2>
-            <div class="accordion-collapse collapse" id="flush-collapseTwo" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Il y'on a beaucoup de domaine de programation et chaq'un ces language, et chaque domaine et differant de l'autre , mais il s'ont le meme concepts 1/0.
-                <ul>
-                  <li>programation d'ordinateur</li>
-                  <li>Programmation des aplication</li>
-                  <li>programmation de web</li>
-                  <li>programmation du data</li>
-                  <li>Ext....</li>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="statisctique">
+                  <div class="progresse" data-prog="87">
+                    <div class="progresse-file"></div>
+                    <div class="progresse-file"></div>
+                  </div>
+                  <div class="status">87%</div>
+                </div><span>Sass/Pug/ESMA6/Gulp</span>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">استعمال اخر ادوات العصر في التصميم </li>
+                  <li class="list-group-item">القدرة على تلخيص الوقت</li>
+                  <li class="list-group-item">موافقة محركات البحث</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThre" aria-expanded="false" aria-controls="flush-collapseThre">
-                 Comment on peut gagner du l'argent du programmation ?</button>
-            </h2>
-            <div class="accordion-collapse collapse" id="flush-collapseThre" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Il y'on a beaucoup de manière de gagner l'argent du programation mais les deux grands domains sont travailer avec l'experience et sans deplome et qui est tres connue dans la programmation,ou travailer comme freelancer, et voici des site de freelancing
-                <ul>
-                  <li>giggzy</li>
-                  <li>freelancer</li>
-                  <li>fivver</li>
-                  <li>freelance</li>
-                  <li>Khamsat (site arabe)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefoor" aria-expanded="false" aria-controls="flush-collapsefoor">
-                 C'est quoi un freelancer ?</button>
-            </h2>
-            <div class="accordion-collapse collapse" id="flush-collapsefoor" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                freelancer est à la fois entrepreneur, propriétaire (de ses moyens de production) et son propre employé (sans être pour autant salarié). Il est maître de ses décisions concernant son travail mais doit toutefois s'adapter aux demandes de sa clientèle.Le terme anglais « freelance » est aussi utilisé, notamment dans les services intellectuels. </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">
-                 Liens externes</button>
-            </h2>
-            <div class="accordion-collapse collapse" id="flush-collapsefive" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body"> 
-                <ul>
-                  <li><a href="#{site4}">https://fr.wikipedia.org/wiki/Programme_informatique</a></li>
-                  <li><a href="#{site4}">https://madnight.github.io/githut/#/pull_requests/2020/4</a></li>
-                  <li><a href="#{site4}">https://elzero.org/important-videos-before-you-learn/</a></li>
-                  <li><a href="#{site4}">https://fr.wikipedia.org/wiki/Robotique</a></li>
-                  <li><a href="#{site4}">https://fr.wikipedia.org/wiki/Travailleur_ind%C3%A9pendant</a></li>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="statisctique">
+                  <div class="progresse" data-prog="70">
+                    <div class="progresse-file"></div>
+                    <div class="progresse-file"></div>
+                  </div>
+                  <div class="status">70%</div>
+                </div><span>Cannvas/JS oop/Ajax</span>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">مبيانات في الصفحة</li>
+                  <li class="list-group-item">نقل البيانات</li>
+                  <li class="list-group-item">التعامل مع data</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="cp-rgt text-center">
-        <div class="container">&copy; Create in 2021 by Mouad Sayah</div>
+    </div>
+    <div class="projet">
+      <div class="container text-center">
+        <h3>أعمالي</h3>
+        <div class="row">
+          <div class="col-lg">
+            <div class="card"><a><img class="card-img-top" src="img/projet2.jpg"/></a>
+              <div class="card-body">
+                <h5 class="card-titleCard">صفحة لتعريف البرمجة (بالفرنسي)</h5>
+                <p class="card-text">اخر اعمالي, صفحة هبوط تعرف البرمجة متجاوبة مع السيو باستعمال ادوات سهلة ك html, css and js.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="card"><a><img class="card-img-top" src="img/projet3.jpg"/></a>
+              <div class="card-body">
+                <h5 class="card-titleCard">اطار عمل لموقع أفلام (بالعربية)</h5>
+                <p class="card-text">موقع يعمل على تقنية نقل البيانات بين السرفر و الموقع عن طريق المنطقة, ذوشكل أنيق و باللغة العربية.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="card"><a><img class="card-img-top" src="img/projet1.jpg"/></a>
+              <div class="card-body">
+                <h5 class="card-titleCard">صفحة مونيو لمطبخ (بالانجليزية)</h5>
+                <p class="card-text">اول صفحة احترافية لي, لا يوجد بها شيء مميز لكنها تذكرني ببداياتي و النقطة التي بدأت منها,فتحمسني من أجل التقدم.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="testimonial">
+      <div class="text-center">
+        <h3>قال تعالى</h3>
+        <p> أَيُّهَا الَّذِينَ آمَنُوا لَا تَأْكُلُوا أَمْوَالَكُمْ بَيْنَكُمْ بِالْبَاطِلِ إِلَّا أَنْ تَكُونَ تِجَارَةً عَنْ تَرَاضٍ مِنْكُمْ ۚ وَلَا تَقْتُلُوا أَنْفُسَكُمْ ۚ إِنَّ اللَّهَ كَانَ بِكُمْ رَحِيمًا </p><br/><span>[سورة النساء - الآية 29]</span>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="container text-center">
+        <h3>تواصل معي</h3>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="fas fa-mobile"> </i>+212605593832</li>
+              <li><i class="fab fa-whatsapp"> </i>+212605593832</li>
+              <li><i class="fas fa-envelope"> </i>mouadsyah@gmail.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <h5>ساعدني</h5>
+            <button class="btn btn-primary"><i class="fab fa-paypal"> </i>paypal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer dir="ltr">
+      <div class="container">&copy; All right reserved 2020 : by MouadSyah </div>
     </footer>
+    <script src="http://localhost:35729/livereload.js"></script>
     <script src="js/js2.min.js"></script>
   </body>
 </html>
