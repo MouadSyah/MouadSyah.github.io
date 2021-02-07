@@ -1,0 +1,184 @@
+ /* start slider  */
+ 
+main{
+    width: 100%;
+    height: 450px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+main > div{
+    display: inline-block;
+    width: 33%;
+    height: 450px;
+    position: relative;
+    margin-left: .5%;
+    cursor: pointer;
+}
+main > div:first-of-type{background: #456; order: 1;}
+main > div:nth-of-type(2){background: #fab;order: 1;}
+main > div:nth-of-type(3){background: #cab;order: 1;}
+main > div:nth-of-type(4){background: #fcb;order: 1;}
+main > div:nth-of-type(5){background: #ca1;order: 1;}
+main > div:nth-of-type(6){background: #0ef;order: 1;}
+main > div:last-of-type{background :#a9d;order: 1;}
+main > div > div{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 42%;
+    background-image: linear-gradient(transparent ,#000000 80% );
+    background-image: -moz-linear-gradient(transparent ,#000000 80% );
+    background-image: -o-linear-gradient(transparent ,#000000 80% );
+    background-image: -webkit-linear-gradient(transparent ,#000000 80% );
+    left: 0;
+    right: 0;
+    cursor: default;
+    margin: 0;
+}
+main i,
+main button::before{
+    content: "\f144";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    color: #ffc23e;
+    margin: 0 10px;
+}
+main > div > div > div:first-of-type{direction: ltr; text-align: right; line-height: 1.7;}
+main > div > div > div:last-of-type{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    direction: ltr;
+}
+main > div > div > div:last-of-type div{
+    flex: 1 0;
+    line-height: 60px;
+    color: #e7e7e7;
+}
+
+/* end slider  */
+
+/* start catalogue */
+
+.catalog{
+    display: block;
+    width: 1200px;
+    margin: auto;
+    height: 500px;
+    position: relative;
+    background-color: #111111;
+    text-align: right;
+    margin-top: 20px;
+}
+.catalog > span{
+    position: absolute;
+    display: block;
+    font-size: 70px;
+    color: #ffc23e;
+    top: 250px;
+}
+.catalog > span:first-of-type{left: 10px;}
+.catalog > span:last-of-type{right: 10px;}
+.film{
+    width: 90%;
+    margin: 0 5%;
+    display: block;
+    height: 400px;
+    background-color: rgb(15, 15, 15);
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow: hidden;
+    direction: rtl;
+}
+.film > div{
+    display: inline-block;
+    width: 24.75%;
+    height: 400px;
+    background-color: #333333;
+    position: relative;
+    margin-left: 0.33%;
+}
+.film > div > a > div{
+    color: #ffc23e;
+    line-height: 400px;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    direction: ltr;
+    font-family: 'Cairo', sans-serif;;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+.film > div:hover > a > div{opacity: 1;}
+.film > div > div:last-of-type{
+    width: 100%;
+    min-height: 30%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(transparent ,#000000 80% );
+    background-image: -moz-linear-gradient(transparent ,#000000 80% );
+    background-image: -o-linear-gradient(transparent ,#000000 80% );
+    background-image: -webkit-linear-gradient(transparent ,#000000 80% );
+}
+.film > div > div:last-of-type i{
+    color: #ffc23e;
+    padding: 0 5px;
+    direction: ltr;
+}
+.film > div > div:last-of-type i:first-of-type{
+    margin-right: 20px;
+}
+.more{    
+    line-height: 330px;
+    text-align: center;
+    font-weight: bold;
+}
+.more h3{   
+     font-size: 40px;
+    font-family: 'Cairo';
+}
+/* end catalogue */
+
+ /* Medium devices (phones, down and 992px) */
+@media (max-width: 576px) { 
+    main > div{
+        width: 99.5%;
+    }
+    .catalog{width: 95%; height: 350px;}
+    .film{ overflow-x: scroll; overflow-y: hidden; height: 250px; margin: 0 2%;}
+    .film > div{ width: 60%; margin: 0 0.25%; height: 250px;}
+    .film > div > div:last-of-type i{padding: 0 2px;}
+    .film > div > div:last-of-type i{
+        padding-bottom: 20px;
+        margin-right:0;
+    }
+    .more{line-height: 150px;}
+    .film > div:hover > a > div{opacity: 0; line-height: 250px;}
+    .film > div:hover > a {background-color: transparent;}
+    .catalog > span {display: none;}
+}
+@media (max-width:992px) { 
+    main{
+        height: 400px;
+    }
+    main > div{
+        height: 400px;
+    }
+    .catalog{width: 95%; height: 400px;}
+    .film{ overflow-x: scroll; overflow-y: hidden; height: 300px;width: 85%; margin: 0 7.5%}
+    .film > div{ width: 200px; margin: 0 0.25%; height: 300px;}
+    .catalog > span{ top: 200px;}
+}
+@media (max-width:1200px) { 
+    .catalog{width: 95%; }
+}

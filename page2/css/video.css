@@ -1,0 +1,194 @@
+.film-para{
+    display: inline-block;
+    padding: 50px;
+    position: relative;
+    left: -50%;
+    transform: translateX(50%);
+}
+    .tv{
+        min-width: 200px;
+        height: 450px;
+        margin: 30px 0;
+        background-color: #dcdcdc1e;
+        position: relative;
+        opacity: .8;
+        text-align: center;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+    @media (max-width: 576px){
+        .tv{
+            width: 90%;
+            margin: 30px auto;
+            height: auto;
+            transform: translateX(0%);
+            left: initial;
+        }
+        .film-para{
+            display: inline-block;
+            padding: 5%;
+            width: 100%;
+            left: initial;
+            transform: translateX(0%);
+        }
+    }
+    video{
+        display: inline-block;
+        height: 100%;
+        z-index: 1;
+        background-color: transparent;
+    }
+    @media (max-width: 576px){
+        video{
+            width: 100%;
+            height: auto;
+        }
+        .DJ{
+            display: none !important;
+        }
+    }
+    .controll{
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(transparent ,#000 );
+        text-align: left;
+    }
+    .its-load,
+    .first-play{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #ffc23e;
+        font-size: 50px;
+        line-height: 450px;
+        z-index: 300;
+        cursor: pointer;
+        background-color: #000000;
+    }
+    .its-load{background-color: transparent;}
+    .its-load i,
+    .first-play i{ 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .its-load i{
+        animation: loading 1s ease-out infinite;
+    }
+    .its-load{display: none;}
+    .progress-video{
+        width: 100%;
+        position: relative;
+    }
+    input[type="range"]{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 3px;
+        background-color: #cdcdcd3f;
+        outline: none;
+        -webkit-transition: all .2s linear;
+        transition: all .0s linear;
+        cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%; 
+        background: #ffc23e;
+        cursor: pointer;
+    }
+    input[type="range"]::-moz-range-thumb  {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ffc23e;
+        cursor: pointer;
+    }
+    input[type="range"]:hover::-webkit-slider-thumb{
+        width: 15px;
+        height: 15px;
+    }
+    input[type="range"]:hover::-moz-range-thumb  {
+        width: 15px;
+        height: 15px;
+    }
+    .file-view{
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        background: #ffc23e;
+        top: 11px;
+    }
+    .left{
+        float: left;
+    }
+    .right{
+        float: right;
+    }
+    .option{
+        width: 90%;
+        margin: auto;
+        display: block;
+        line-height: 40px;
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
+    .option i{
+        padding: 0px 12px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+    }
+    .option span input{
+        width : 100px;
+        transform: translateY(-3.5px);
+        transition: all .0s linear;
+        display: none;
+    }
+    .option span input[type="range"]::-webkit-slider-thumb{
+        width: 15px;
+        height: 15px;
+    }
+    .option span input[type="range"]::-moz-range-thumb  {
+        width: 15px;
+        height: 15px;
+    }
+    .file-volim{
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background: #ffc23e;
+        top: 18px;
+        left: 43px;
+        display: none;
+    }
+    .DJ{ 
+        display: inline-block;
+        position: relative;
+        height: 100%;
+    }
+    .DJ:hover input,
+    .DJ:hover .file-volim{
+        display: inline;
+    }
+    @keyframes loading{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
