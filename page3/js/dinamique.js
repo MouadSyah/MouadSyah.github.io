@@ -5,6 +5,7 @@ window.onscroll =()=>{
     else 
     {$(".to-top").hide()}
 };
+$("body").hide()
 $("body").niceScroll({
     cursorcolor:" #b77520",
     cursorwidth:"16px",
@@ -12,3 +13,6 @@ $("body").niceScroll({
     zindex : 99999999,
     cursorborderradius:0
   });
+  window.onload= function () {
+    $("body").show()
+  }
