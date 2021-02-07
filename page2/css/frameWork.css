@@ -16,7 +16,7 @@ body{
     margin: auto; 
     display: block !important;
 }
-@media (max-width: 576px){
+@media (max-width: 1200px){
     .container {width: 95%;}
 }
 .arabic{

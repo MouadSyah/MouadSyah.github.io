@@ -18,7 +18,7 @@
         transform: translateX(-50%);
         overflow: hidden;
     }
-    @media (max-width: 576px){
+    @media (max-width: 992px){
         .tv{
             width: 90%;
             margin: 30px auto;
@@ -40,7 +40,7 @@
         z-index: 1;
         background-color: transparent;
     }
-    @media (max-width: 576px){
+    @media (max-width: 992px){
         video{
             width: 100%;
             height: auto;

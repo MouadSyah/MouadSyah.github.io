@@ -1,10 +1,12 @@
-$("body").niceScroll({
-    cursorcolor:"#ffc23e",
-    cursorwidth:"15px",
-    cursorborder:'1px solid #1e1e1e',
-    cursorborderradius:0,
-    zindex:9999
-  });
+if (innerWidth > 992) {
+    $("body").niceScroll({
+        cursorcolor:"#ffc23e",
+        cursorwidth:"15px",
+        cursorborder:'1px solid #1e1e1e',
+        cursorborderradius:0,
+        zindex:9999
+      });
+}
 var hideSearch = _=>{
     document.querySelector("#searchButton").setAttribute("disabled" , "");
     document.querySelector("#searchInput").setAttribute("disabled", "");
