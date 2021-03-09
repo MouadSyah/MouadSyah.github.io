@@ -99,6 +99,10 @@ $(".fa-expand").click(function() {
     else {
         Fullscreen(video[0]);
         $(".file-view").css({"width" :  innerWidth * video.currentTime / video.duration +"px" })
+        $(".play").click();
+        setTimeout(() => {
+            $(".play").click();
+        }, 100);
     }
 })
 
@@ -136,14 +140,15 @@ $(video).dblclick(function () {
 })
 
 function detectKeypress(e) {
-	if(e.keyCode == 32) {
+    e.preventDefault();
+    if(e.keyCode == 32) {
         $(".play").click();
     }
     if(e.keyCode == 39) {
         video.currentTime = video.currentTime + 5
         document.querySelector(".progres").value = video.currentTime * 1000 / video.duration;
         $(".file-view").css({"width" :  $("video").width() * video.currentTime * 1000 / video.duration / 1000+"px" })
-	}
+    }
     if(e.keyCode == 37) {
         video.currentTime = video.currentTime - 5
         document.querySelector(".progres").value = video.currentTime * 1000 / video.duration;
@@ -152,38 +157,12 @@ function detectKeypress(e) {
     if(e.keyCode == 70 | e.keyCode == 27){
         $(".fa-expand").click()
     }
-  else {
+    else {
     return;
-  }
-  setTimeout(() => {
+    }
+    setTimeout(() => {
     this.keydown = false
-  }, 500);
-}
-let shows = () => {
-    let inter = setInterval(() => {
-        $(".tv").css({"cursor" : "initial"})
-        $(".controll").show()
-    }, 2);
-  setTimeout(() => {
-    clearInterval(inter)
-    $(".tv").css({"cursor" : "none"})
-    $(".controll").hide()
-  }, 5000);
+    }, 300);
 }
 
 $(window).delay("slow").on("keydown", detectKeypress );
-
-document.querySelector("video").addEventListener("mousemove", shows)
-document.querySelector("video").addEventListener("click", ()=>{$(".tv").css({"cursor" : "initial"})})
-
-
-$(".film-para").mouseleave(function () {
-    $(".controll").hide()
-    setTimeout(() => {
-        $(".controll").hide()
-    }, 2000);
-})
-
-$(".film-para").mouseenter(function () {
-    $(".controll").show()
-})
