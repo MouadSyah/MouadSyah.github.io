@@ -139,30 +139,35 @@ $(video).dblclick(function () {
     $(".fa-expand").click()
 })
 
-function detectKeypress(e) {
-    e.preventDefault();
-    if(e.keyCode == 32) {
-        $(".play").click();
-    }
-    if(e.keyCode == 39) {
-        video.currentTime = video.currentTime + 5
-        document.querySelector(".progres").value = video.currentTime * 1000 / video.duration;
-        $(".file-view").css({"width" :  $("video").width() * video.currentTime * 1000 / video.duration / 1000+"px" })
-    }
-    if(e.keyCode == 37) {
-        video.currentTime = video.currentTime - 5
-        document.querySelector(".progres").value = video.currentTime * 1000 / video.duration;
-        $(".file-view").css({"width" :  $("video").width() * video.currentTime * 1000 / video.duration / 1000+"px" })
-    }
-    if(e.keyCode == 70 | e.keyCode == 27){
-        $(".fa-expand").click()
-    }
-    else {
-    return;
-    }
-    setTimeout(() => {
-    this.keydown = false
-    }, 300);
-}
+function detectKeypress(e ) {
+    if (true) {
+        console.log(e.keyCode);
 
-$(window).delay("slow").on("keydown", detectKeypress );
+        if(e.keyCode == 32) {
+            e.preventDefault(e.keyCod)
+            $(".first-play").hide();
+            $(".play").click();
+        }
+        if(e.keyCode == 39) {
+            video.currentTime = video.currentTime + 5
+            document.querySelector(".progres").value = video.currentTime * 1000 / video.duration;
+            $(".file-view").css({"width" :  $("video").width() * video.currentTime * 1000 / video.duration / 1000+"px" })
+        }
+        if(e.keyCode == 37) {
+            video.currentTime = video.currentTime - 5
+            document.querySelector(".progres").value = video.currentTime * 1000 / video.duration;
+            $(".file-view").css({"width" :  $("video").width() * video.currentTime * 1000 / video.duration / 1000+"px" })
+        }
+        if(e.keyCode == 70 | e.keyCode == 27){
+            $(".fa-expand").click()
+        }
+        else {
+        return;
+        }
+        setTimeout(() => {
+        this.keydown = false
+        }, 300);
+    }
+}
+document.querySelector(".vid-film").addEventListener("mouseenter", _ => window.onkeydown = detectKeypress  );
+document.querySelector(".vid-film").addEventListener("mouseleave", _ => window.onkeydown = _ =>{});
